@@ -1,0 +1,1 @@
+// mucho codigo re copado, (copiado de chat gpt)
