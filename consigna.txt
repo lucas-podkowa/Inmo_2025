@@ -1,0 +1,39 @@
+Hoy necesito que me ayudes a corregir trabajos prácticos hechos por alumnos de una clase de programación. Te mostrare las consignas y luego simplemente te ire pegando el código hecho por los laumnos, cada vez que pegue un nuevo código simplemente me tendrás que decir si este alumno cumple o no con lo pedido, si no lo cumple necesito que me digas en que se equivoco, confírmame que has entendido
+
+Ejercicio 1:
+Una tienda necesita digitalizar la gestión de sus productos y categorías. Tu tarea es modelar
+este sistema utilizando Clases en JavaScript. Debes crear las siguientes entidades y funcionalidades:
+-Producto
+◦ Debe tener nombre, precio y categoría (inicialmente null).
+◦ El stock debe estar encapsulado como propiedad privada (#stock).
+◦ Debe tener los siguientes cuatro métodos:
+▪ setStock(cantidad)
+▪ getStock()
+▪ setCategoria(categoria)
+▪ info() que devuelva nombre, precio y categoría del producto.
+◦ Implementar un método estático aplicarDescuento(producto, porcentaje) que retorne el
+precio final con descuento.
+-Categoría
+◦ Debe contener un nombre y una lista de productos asociados.
+◦ Debe tener un método agregarProducto(producto) que asocie un producto a la categoría.
+▪ Este método debe tener cierta relación con setCategoria(categoria) del producto ya
+que si estoy agregando un producto a esta categoría indirectamente también estoy
+diciendo que dicho producto será de esta categoría por lo que no es descabellado
+pensar en algo como “producto.setCategoria(this)”
+◦ Debe tener un método listarProductos() que devuelva el nombre de todos los productos de
+la categoría.
+
+Ejercicio 2:
+Una vez creadas las clases, definir la serie sentencias para hacer uso de esas clases. Es decir,
+una serie de lineas donde se realice lo siguiente:
+- Crear al menos dos instancias de categorías (ej: electrónica, hogar, etc)
+- Crear al menos dos instancias de productos (ej: aspiradora, Smart TV 55, etc)
+- Asignar stock a dichos productos mediante el método setStock()
+- Asignar categorías a estos productos mediante el método agregarProducto()
+- Mostrar información de los productos mediante su método info()
+- Utilizar el método estático del producto para aplicar algún porcentaje de descuento de modo
+que al pasar un producto y un porcentaje, éste me muestre un mensaje con en nuevo precio.
+
+
+
+El método info() no muestra correctamente la categoría: está imprimiendo directamente this.categoria, que es un objeto Categoria, por lo que se imprimirá [object Object] en vez del nombre de la categoría.
